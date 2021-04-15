@@ -1,0 +1,35 @@
+DROP TABLE DEVICE IF EXISTS;
+ 
+CREATE TABLE DEVICE  (
+    id BIGINT,  
+    description VARCHAR(100)
+) ;
+
+
+DROP TABLE TESTER IF EXISTS;
+ 
+CREATE TABLE TESTER  (
+    id BIGINT,  
+    first_name VARCHAR(100),
+	last_name VARCHAR(100),
+	country VARCHAR(10),
+	last_login TIMESTAMP
+	
+) ;
+
+
+DROP TABLE BUG IF EXISTS;
+ 
+CREATE TABLE BUG  (
+    id BIGINT,
+    device_id BIGINT,  
+    tester_id BIGINT
+);
+
+
+DROP TABLE TESTER_DEVICE IF EXISTS;
+ 
+CREATE TABLE TESTER_DEVICE  (
+	tester_id BIGINT,
+    device_id BIGINT
+);
